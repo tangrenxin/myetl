@@ -29,6 +29,7 @@
   <!-- Activate Cocoon Spring Configurator -->
   <configurator:settings/>
 
+
   <!-- Configure Log4j -->
   <bean name="org.apache.cocoon.spring.configurator.log4j"
         class="org.apache.cocoon.spring.configurator.log4j.Log4JConfigurator"

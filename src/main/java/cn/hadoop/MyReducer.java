@@ -15,5 +15,6 @@ public class MyReducer extends Reducer<LongWritable, Text, Text, NullWritable> {
         for (Text v2 : v2s) {
             context.write(v2, NullWritable.get());
         }
+
     };
 }

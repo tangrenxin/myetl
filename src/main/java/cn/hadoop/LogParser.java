@@ -58,6 +58,7 @@ public class LogParser {
         return traffic;
     }
 
+
     /**
      * 状态
      * @param line

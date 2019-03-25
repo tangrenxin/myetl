@@ -21,7 +21,6 @@ public class LogMR extends Configured implements Tool{
     public int run(String[] args) throws Exception {
         final String inputPath = args[0];
         final String outPath = args[1];
-
         final Configuration conf = new Configuration();
         final Job job = new Job(conf, LogMR.class.getSimpleName());
         job.setJarByClass(LogMR.class);

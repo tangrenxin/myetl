@@ -21,7 +21,6 @@ public class MyMapper extends Mapper<LongWritable, Text, LongWritable, Text> {
         final String hour = String.valueOf(ps.parseHour(line));
         String url = ps.parseURL(line);
 
-
         //过滤所有静态的资源请求
         if(url.startsWith("GET /static")||url.startsWith("GET /uc_server")){
             return;
