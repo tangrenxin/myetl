@@ -15,6 +15,11 @@ public class MyMapper extends Mapper<LongWritable, Text, LongWritable, Text> {
     Text v2 = new Text();
     protected void map(LongWritable key, Text value, Mapper<LongWritable,Text,LongWritable,Text>.Context context) throws java.io.IOException ,InterruptedException {
         final String line = value.toString();
+         if(line.trim().length()<30)
+        {
+            // 日志格式错误
+            return;
+        }
         final String[] parsed = ps.parse(line);
         final String ip =ps.parseIP(line);
         final String logtime = ps.parseTime(line);
